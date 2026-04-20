@@ -1,0 +1,41 @@
+.story-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.story-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.card-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #2dd4bf;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-bottom-left-radius: 4px;
+}
+.card-image {
+  height: 180px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #9ca3af;
+  font-style: italic;
+}
+.card-content { padding: 10px; font-size: 12px; color: #666; line-height: 1.6; }
+.card-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
