@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Header.css';
+import '../../styles/LayoutCss/Header.css';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -9,8 +9,8 @@ const Header = () => {
       <div className="header-top">
         <div className="header-logo">Hiên Nhà Của Sò</div>
         <div className="header-search">
-          <input type="text" placeholder="Tìm truyện..." />
-          <button className="search-btn">🔍</button>
+          <input type="text" placeholder="Tìm truyện...">
+          </input>
         </div>
         <div className="header-auth">
           <button className="btn-login">Đăng nhập</button>
@@ -22,7 +22,7 @@ const Header = () => {
         <ul className="nav-menu">
           <li><Link to="/">Trang chủ</Link></li>
           <li><Link to="/truyen-moi">Truyện mới</Link></li>
-          <li><Link to= "/truyen full">Truyện full</Link></li>
+          <li><Link to= "/truyen-full">Truyện full</Link></li>
           <li className="has-submenu">
             Thể loại ▼
             <ul className="submenu">

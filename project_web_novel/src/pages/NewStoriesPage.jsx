@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header'; // Import Header
-import Footer from '../components/Footer'; // Import Footer
-import StoryCard from '../components/StoryCard';
+import Header from '../components/Layout/Header';
+import Footer from '../components/Layout/Footer'; 
+import StoryCard from '../components/Stories/StoryCard';
 import { DataStories } from '../mockData/DataStories';
-import '../styles/NewStoriesPage.css';
+import '../styles/PageCss/NewStoriesPage.css';
 
 const NewStoriesPage = () => {
   const [stories, setStories] = useState([]);

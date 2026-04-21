@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/StoryCard.css';
+import '../../styles/StoriesCss/StoryCard.css';
 
 const StoryCard = ({ title, status, image, author, view, chapters, category }) => {
   return (

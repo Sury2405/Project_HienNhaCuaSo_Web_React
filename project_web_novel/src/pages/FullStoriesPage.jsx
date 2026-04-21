@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header'; // Import Header
-import Footer from '../components/Footer'; // Import Footer
-import StoryCard from '../components/StoryCard';
+import Header from '../components/Layout/Header'; 
+import Footer from '../components/Layout/Footer'; 
+import StoryCard from '../components/Stories/StoryCard';
 import { DataStories } from '../mockData/DataStories';
-import '../styles/NewStoriesPage.css';
+import  '../styles/PageCss/FullStoriesPage.css';
 
 const FullStoriesPage = () => {
   const [stories, setStories] = useState([]);
@@ -33,7 +33,7 @@ const FullStoriesPage = () => {
 
       {/* PHẦN 2: CENTER (Nội dung chính) */}
       <main className="container-new-stories">
-        <h2 className="page-title">Truyện mới nhất</h2>
+        <h2 className="page-title">Truyện đã hoàn thành</h2>
         
         {loading ? (
           <div className="loading">Đang tải truyện...</div>
