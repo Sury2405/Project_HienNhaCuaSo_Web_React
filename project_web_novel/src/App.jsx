@@ -1,13 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
+import NewStoriesPage from './pages/NewStoriesPage';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-     
-      <Homepage/>
-      
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/truyen-moi" element={<NewStoriesPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

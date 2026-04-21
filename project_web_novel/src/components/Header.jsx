@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.css';
+import '../styles/Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -19,9 +20,9 @@ const Header = () => {
       {/* Tầng 2 */}
       <nav className="header-nav">
         <ul className="nav-menu">
-          <li>Trang chủ</li>
-          <li>Truyện mới</li>
-          <li>Truyện full</li>
+          <li><Link to="/">Trang chủ</Link></li>
+          <li><Link to="/truyen-moi">Truyện mới</Link></li>
+          <li><Link to= "/truyen full">Truyện full</Link></li>
           <li className="has-submenu">
             Thể loại ▼
             <ul className="submenu">
