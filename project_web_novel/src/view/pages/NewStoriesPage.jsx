@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Layout/Header'; 
+import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer'; 
 import StoryCard from '../components/Stories/StoryCard';
-import { DataStories } from '../mockData/DataStories';
-import  '../styles/PageCss/Home.css';
+import { DataStories } from '../../model/mockData/DataStories';
+import '../styles/PageCss/NewStoriesPage.css';
 
-const HomePage = () => {
+const NewStoriesPage = () => {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,7 +33,7 @@ const HomePage = () => {
 
       {/* PHẦN 2: CENTER (Nội dung chính) */}
       <main className="container-new-stories">
-        <h2 className="page-title">Truyện Đề Cử</h2>
+        <h2 className="page-title">Truyện mới nhất</h2>
         
         {loading ? (
           <div className="loading">Đang tải truyện...</div>
@@ -72,4 +72,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default NewStoriesPage;

@@ -1,13 +1,13 @@
 import React from 'react';
-import hinh1 from '../assets/hinh1.jpg';
-import hinh2 from '../assets/hinh2.jpg';
-import hinh3 from '../assets/hinh3.jpg';
-import hinh4 from '../assets/hinh4.jpg';
-import hinh5 from '../assets/hinh5.jpg';
-import hinh6 from '../assets/hinh6.jpg';
-import hinh7 from '../assets/hinh7.jpg';
-import hinh8 from '../assets/hinh8.jpg';
-import hinh9 from '../assets/hinh9.jpg';
+import hinh1 from '../../view/assets/hinh1.jpg';
+import hinh2 from '../../view/assets/hinh2.jpg';
+import hinh3 from '../../view/assets/hinh3.jpg';
+import hinh4 from '../../view/assets/hinh4.jpg';
+import hinh5 from '../../view/assets/hinh5.jpg';
+import hinh6 from '../../view/assets/hinh6.jpg';
+import hinh7 from '../../view/assets/hinh7.jpg';
+import hinh8 from '../../view/assets/hinh8.jpg';
+import hinh9 from '../../view/assets/hinh9.jpg';
 
 export const DataStories = [
   {

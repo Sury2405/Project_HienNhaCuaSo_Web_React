@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Layout/Header'; 
 import Footer from '../components/Layout/Footer'; 
 import StoryCard from '../components/Stories/StoryCard';
-import { DataStories } from '../mockData/DataStories';
+import { DataStories } from '../../model/mockData/DataStories';
 import  '../styles/PageCss/FullStoriesPage.css';
 
 const FullStoriesPage = () => {
