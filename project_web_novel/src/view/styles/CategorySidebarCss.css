@@ -1,0 +1,18 @@
+.category-list ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia làm 2 cột */
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.category-list li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.category-list li a:hover {
+  color: #3b82f6; /* Màu xanh khi rê chuột vào */
+}
