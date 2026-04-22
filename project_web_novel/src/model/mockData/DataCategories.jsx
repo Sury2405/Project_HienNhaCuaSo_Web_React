@@ -15,7 +15,7 @@ export const DataCategories = [
   { id: 12, name: "Trọng Sinh", slug: "trong-sinh" },
   { id: 13, name: "Kiếm Hiệp", slug: "kiem-hiep" },
   { id: 14, name: "Tiên Hiệp", slug: "tien-hiep" },
-  { id: 15, name: "Huyền Nhuyễn/Dị Giới", slug: "huyen-nhuyen-di-gioi" },
+  { id: 15, name: "Huyền Nhuyễn", slug: "huyen-nhuyen" },
   { id: 16, name: "Hệ Thống", slug: "he-thong" },
   { id: 17, name: "Trinh Thám", slug: "trinh-tham" },
   { id: 18, name: "Kinh Dị", slug: "kinh-di" },
@@ -23,5 +23,6 @@ export const DataCategories = [
   { id: 20, name: "Điền Văn", slug: "dien-van" },
   { id: 21, name: "Cung Đấu", slug: "cung-dau" },
   { id: 22, name: "Gia Đấu", slug: "gia-dau" },
-  { id: 23, name: "Võng Du", slug: "vong-du" }
+  { id: 23, name: "Võng Du", slug: "vong-du" },
+  { id: 24, name: "Dị Giới", slug: "di-gioi" }
 ];

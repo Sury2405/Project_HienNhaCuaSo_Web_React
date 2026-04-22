@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/LayoutCss/Header.css';
+import { DataCategories } from '../../../model/mockData/DataCategories';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -23,12 +24,15 @@ const Header = () => {
           <li><Link to="/">Trang chủ</Link></li>
           <li><Link to="/truyen-moi">Truyện mới</Link></li>
           <li><Link to= "/truyen-full">Truyện full</Link></li>
+          {/* MENU THỂ LOẠI THẢ XUỐNG */}
           <li className="has-submenu">
-            Thể loại ▼
-            <ul className="submenu">
-              <li>Ngôn tình</li>
-              <li>Ngọt sủng</li>
-              <li>Ngược tâm</li>
+            <span>Thể loại ▼</span>
+            <ul className="submenu-grid">
+              {DataCategories.map((cat) => (
+                <li key={cat.id}>
+                  <Link to={`/the-loai/${cat.slug}`}>{cat.name}</Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li>Bảng xếp hạng</li>
