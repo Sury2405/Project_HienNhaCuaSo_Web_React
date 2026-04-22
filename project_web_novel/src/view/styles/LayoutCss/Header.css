@@ -6,6 +6,7 @@
   top: 0;
   z-index: 100;
 }
+
 .header-top {
   max-width: 1200px;
   margin: 0 auto;
@@ -31,9 +32,48 @@
   border-radius: 25px;
   outline: none;
 }
-.header-auth { display: flex; gap: 10px; }
-.btn-login { background: #f472b6; color: #fff; border: none; padding: 7px 15px; border-radius: 5px; cursor: pointer; }
-.btn-register { background: #a855f7; color: #fff; border: none; padding: 7px 15px; border-radius: 5px; cursor: pointer; }
+.header-auth { 
+  display: flex; 
+  gap: 10px; 
+}
+.btn-login { 
+ display: inline-block;
+  background: #f472b6;  
+  padding: 7px 15px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-register { 
+  display: inline-block;
+  background: #f472b6;   
+  padding: 7px 15px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  color: #fff;
+  text-decoration: none;  
+  border: 2px; 
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header-auth :hover {
+  color:#f472b6; 
+  background: #e7e7e7; 
+  display: inline-block;
+  box-shadow: #b5b7bb;
+}
 
 .header-nav { background-color: #f9fafb; border-top: 1px solid #eee; }
 .nav-menu {
@@ -66,7 +106,6 @@
 .has-submenu {
   position: relative;
   cursor: pointer;
-  padding-bottom: 10px;
 }
 
 /* Khung chứa các thể loại (ẩn đi mặc định) */
@@ -108,4 +147,103 @@
   color: #3b82f6;
   background-color: #f0f7ff;
   border-radius: 4px;
+}
+/* Khung chứa menu con */
+.submenu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 550px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+/* Hiển thị khi hover */
+.has-submenu:hover .submenu-container {
+  display: block;
+}
+
+/* Lưới chia cột cho các nút */
+.submenu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột nút */
+  gap: 12px;
+}
+
+/* Style cho từng nút bấm Thể loại */
+.category-button {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #f3f4f6; /* Màu nền xám nhạt */
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 6px; /* Bo góc nút */
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hiệu ứng khi di chuột vào Nút */
+.category-button:hover {
+  background-color: #f472b6; /* Đổi sang màu xanh dương */
+  color: #ffffff;            /* Chữ trắng */
+  transform: translateY(-2px); /* Nhích nhẹ lên trên */
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+/* Container chung cho menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Khoảng cách giữa các nút */
+  list-style: none;
+  padding: 10px 15px;
+}
+
+/* Định dạng chung cho tất cả nút trên Header */
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b5b7bb; /* Màu nền xám nhạt như ảnh mẫu */
+  color: #4b4458;            /* Màu chữ xám đậm */
+  text-decoration: none;     /* Bỏ gạch chân */
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;        /* Bo góc mềm mại */
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hiệu ứng khi di chuột vào (Hover) */
+.nav-button:hover {
+  background-color: #f472b6; /* Đổi sang nền trắng */
+  color: #f0f2f5;            /* Chữ chuyển sang màu xanh dương chuyên nghiệp */
+  border-color: #f9fafc;     /* Thêm viền xanh mảnh */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
+  transform: translateY(-1px); /* Nhích nhẹ lên tạo cảm giác tương tác */
+}
+
+/* Xử lý riêng cho mục "Thể loại ▼" vì nó là thẻ span */
+.has-submenu .nav-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Loại bỏ định dạng mặc định của thẻ li */
+.nav-menu li {
+  margin: 0;
 }
