@@ -3,6 +3,7 @@ import '../../styles/LayoutCss/Header.css';
 import { DataCategories } from '../../../model/mockData/DataCategories';
 import { Link } from 'react-router-dom';
 
+
 const Header = () => {
   return (
     <header className="header-container">

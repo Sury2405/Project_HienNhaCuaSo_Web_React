@@ -9,7 +9,7 @@ import hinh7 from '../../view/assets/hinh7.jpg';
 import hinh8 from '../../view/assets/hinh8.jpg';
 import hinh9 from '../../view/assets/hinh9.jpg';
 
-export const DataStories = [
+export const DataUser = [
     {
         id: 1,
         userName: "sury2405",
@@ -28,7 +28,7 @@ export const DataStories = [
         userName: "ngoc2305",
         name: "Ngọc",
         password: "123456",
-        email: 'ngoc@gmail.com',
+        email: 'sury@gmail.com',
         role: "member",
         avatar: hinh5,
         bio: "Người yêu thích những câu truyện lãng mạn",
