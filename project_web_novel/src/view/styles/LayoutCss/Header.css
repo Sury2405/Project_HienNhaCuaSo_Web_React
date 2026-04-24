@@ -1,3 +1,4 @@
+/* --- GIỮ NGUYÊN CÁC STYLE CŨ CỦA BẠN --- */
 .header-container {
   width: 100%;
   background-color: #fff;
@@ -15,16 +16,19 @@
   justify-content: space-between;
   padding: 15px 20px;
 }
+
 .header-logo {
   color: #60a5fa;
   font-size: 24px;
   font-weight: bold;
   font-style: italic;
 }
+
 .header-search {
   flex: 0 1 400px;
   position: relative;
 }
+
 .header-search input {
   width: 100%;
   padding: 8px 20px;
@@ -32,24 +36,18 @@
   border-radius: 25px;
   outline: none;
 }
+
+/* --- CHỈNH SỬA & THÊM MỚI PHẦN AUTH/USER --- */
+
 .header-auth { 
   display: flex; 
   gap: 10px; 
-}
-.btn-login { 
- display: inline-block;
-  background: #f472b6;  
-  padding: 7px 15px; 
-  border-radius: 5px; 
-  cursor: pointer;
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Căn giữa theo chiều dọc */
 }
 
-.btn-register { 
-  display: inline-block;
+/* Style cho các nút khi chưa đăng nhập */
+.btn-login, .btn-register { 
+  display: inline-flex;
   background: #f472b6;   
   padding: 7px 15px; 
   border-radius: 5px; 
@@ -59,96 +57,118 @@
   align-items: center;
   justify-content: center;
 }
-.btn{
+
+.btn {
   color: #fff;
   text-decoration: none;  
-  border: 2px; 
-  align-items: center;
-  justify-content: center;
+  font-weight: 500;
 }
 
-
-.header-auth :hover {
-  color:#f472b6; 
+.header-auth button:hover {
   background: #e7e7e7; 
-  display: inline-block;
-  box-shadow: #b5b7bb;
 }
+
+.header-auth button:hover .btn {
+  color: #f472b6;
+}
+
+/* CSS MỚI: PHẦN THÔNG TIN USER SAU KHI ĐĂNG NHẬP */
+
+.user-logged-in {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.user-logged-in:hover {
+  background-color: rgba(244, 114, 182, 0.1); /* Màu hồng nhạt khi hover */
+}
+
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #60a5fa; /* Viền xanh giống logo */
+  object-fit: cover;
+}
+
+.user-info-header {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.welcome-txt {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: -2px;
+}
+
+.user-name-txt {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Badge phân quyền (AUTHOR, ADMIN, MEMBER) */
+.role-tag {
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #fff;
+  width: fit-content;
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+}
+
+.role-tag.author { background-color: #f59e0b; } /* Màu vàng cam */
+.role-tag.admin { background-color: #ef4444; }  /* Màu đỏ */
+.role-tag.member { background-color: #3b82f6; } /* Màu xanh dương */
+
+/* --- GIỮ NGUYÊN CÁC PHẦN NAV VÀ SUBMENU CŨ --- */
 
 .header-nav { background-color: #f9fafb; border-top: 1px solid #eee; }
+
 .nav-menu {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   list-style: none;
   padding: 10px 20px;
-  gap: 30px;
+  gap: 15px;
+  align-items: center;
 }
-.nav-menu li { font-weight: 500; color: #555; cursor: pointer; position: relative; }
-.nav-menu li:hover { color: #3b82f6; }
 
-/* Submenu đơn giản */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #eee;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  min-width: 150px;
-  padding: 10px 0;
-}
-.has-submenu:hover .submenu { display: block; }
-.submenu li { padding: 8px 20px; }
-
-/* Thiết lập cho mục Thể loại có menu con */
-.has-submenu {
-  position: relative;
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b5b7bb;
+  color: #4b4458;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
-/* Khung chứa các thể loại (ẩn đi mặc định) */
-.submenu-grid {
-  display: none; /* Ẩn menu */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  min-width: 500px; /* Độ rộng đủ cho 3-4 cột */
-  border: 1px solid #eee;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  padding: 15px;
-  list-style: none;
-  z-index: 1000;
-  
-  /* Chia cột cho danh sách thể loại */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 10px;
+.nav-button:hover {
+  background-color: #f472b6;
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-/* Hiệu ứng khi di chuột vào mục Thể loại thì hiện menu con */
-.has-submenu:hover .submenu-grid {
-  display: grid; /* Hiện menu dạng lưới */
-}
-
-/* Style cho từng link thể loại trong menu */
-.submenu-grid li a {
-  font-size: 13px;
-  color: #555;
-  text-decoration: none;
-  display: block;
-  padding: 5px;
-  transition: all 0.2s;
-}
-
-.submenu-grid li a:hover {
-  color: #3b82f6;
-  background-color: #f0f7ff;
-  border-radius: 4px;
-}
-/* Khung chứa menu con */
 .submenu-container {
   display: none;
   position: absolute;
@@ -164,86 +184,29 @@
   margin-top: 5px;
 }
 
-/* Hiển thị khi hover */
 .has-submenu:hover .submenu-container {
   display: block;
 }
 
-/* Lưới chia cột cho các nút */
 .submenu-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cột nút */
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 
-/* Style cho từng nút bấm Thể loại */
 .category-button {
   display: block;
   text-align: center;
-  padding: 10px 20px;
-  background-color: #f3f4f6; /* Màu nền xám nhạt */
+  padding: 10px;
+  background-color: #f3f4f6;
   color: #4b5563;
   text-decoration: none;
   font-size: 13px;
-  border-radius: 6px; /* Bo góc nút */
-  border: 1px solid transparent;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  border-radius: 6px;
+  transition: all 0.2s;
 }
 
-/* Hiệu ứng khi di chuột vào Nút */
 .category-button:hover {
-  background-color: #f472b6; /* Đổi sang màu xanh dương */
-  color: #ffffff;            /* Chữ trắng */
-  transform: translateY(-2px); /* Nhích nhẹ lên trên */
-  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
-}
-/* Container chung cho menu */
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Khoảng cách giữa các nút */
-  list-style: none;
-  padding: 10px 15px;
-}
-
-/* Định dạng chung cho tất cả nút trên Header */
-.nav-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #b5b7bb; /* Màu nền xám nhạt như ảnh mẫu */
-  color: #4b4458;            /* Màu chữ xám đậm */
-  text-decoration: none;     /* Bỏ gạch chân */
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 8px;        /* Bo góc mềm mại */
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-  cursor: pointer;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Hiệu ứng khi di chuột vào (Hover) */
-.nav-button:hover {
-  background-color: #f472b6; /* Đổi sang nền trắng */
-  color: #f0f2f5;            /* Chữ chuyển sang màu xanh dương chuyên nghiệp */
-  border-color: #f9fafc;     /* Thêm viền xanh mảnh */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
-  transform: translateY(-1px); /* Nhích nhẹ lên tạo cảm giác tương tác */
-}
-
-/* Xử lý riêng cho mục "Thể loại ▼" vì nó là thẻ span */
-.has-submenu .nav-button {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-/* Loại bỏ định dạng mặc định của thẻ li */
-.nav-menu li {
-  margin: 0;
+  background-color: #f472b6;
+  color: #fff;
 }
